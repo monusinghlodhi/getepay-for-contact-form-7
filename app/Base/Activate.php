@@ -23,15 +23,15 @@ class Activate {
 		ob_start();
 		$this->create_confirmation_page();
 		$this->create_example_form();
-		$this->custom_plugin_activate();
+		$this->create_getepay_rceipt_page_plugin_activate();
 
 		ob_end_clean();
 	}
 
-	function custom_plugin_activate() {
+	function create_getepay_rceipt_page_plugin_activate() {
 		// Create a new page on activation
 		$page_id = wp_insert_post(array(
-			'post_title'     => 'Getepay Receipt Page New',
+			'post_title'     => 'Getepay Receipt Page',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',

@@ -96,7 +96,7 @@ class Email
     $default = <<<GETEPAY_CF7_EMAIL_BODY
       <div>
         <p style="text-align: left;">Hello {customer_name},</p>
-        Your payment has been successfully completed. Here are your transaction details:
+        Your payment has been {transaction_status}. Here are your transaction details:
         <p style="text-align: left;"><strong>Transaction ID:</strong> {transaction_id}</p>
         <p style="text-align: left;"><strong>Date:</strong> {transaction_date}</p>
         <p style="text-align: left;"><strong>Amount Paid:</strong> {transaction_amount}</p>

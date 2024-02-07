@@ -5,9 +5,9 @@ namespace GetepayCF7\Model;
 class PaymentDatabase
 {
     /**
-     * Create the `wp_bcf7_payment` table.
+     * Create the `wp_getepay_cf7_payment` table.
      *
-     * This method creates the `wp_bcf7_payment` table in the WordPress
+     * This method creates the `wp_getepay_cf7_payment` table in the WordPress
      * database if it does not exist. The table is used to store information
      * about payments made through the CF7 Getepay plugin.
      *
@@ -35,6 +35,7 @@ class PaymentDatabase
             email varchar (60) NOT NULL DEFAULT '',
             mode varchar (60) NOT NULL DEFAULT '',
             status varchar (60) NOT NULL DEFAULT '',
+            cf7_data varchar (256) DEFAULT NULL,
             created_at datetime DEFAULT CURRENT_TIMESTAMP,
             paid_at datetime DEFAULT NULL,
             PRIMARY KEY  (id)
@@ -44,4 +45,5 @@ class PaymentDatabase
             dbDelta($query);
         }
     }
+    
 }
